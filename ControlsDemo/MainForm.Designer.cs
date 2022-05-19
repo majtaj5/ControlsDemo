@@ -74,6 +74,7 @@
             this.btnDisplay.TabIndex = 2;
             this.btnDisplay.Text = "Show Items";
             this.btnDisplay.UseVisualStyleBackColor = true;
+            this.btnDisplay.Click += new System.EventHandler(this.btnDisplay_Click);
             // 
             // cboOptions
             // 
