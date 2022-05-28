@@ -60,7 +60,7 @@ namespace ControlsDemo
 
             using (Transaction trans = db.TransactionManager.StartTransaction())
             {
-                TextStyleTable tsTab = trans.GetObject(db.LinetypeTableId, OpenMode.ForRead) as TextStyleTable;
+                TextStyleTable tsTab = trans.GetObject(db.TextStyleTableId, OpenMode.ForRead) as TextStyleTable;
                 foreach (var ts in tsTab)
                 {
                     TextStyleTableRecord sttr = trans.GetObject(ts, OpenMode.ForRead) as TextStyleTableRecord;
@@ -69,5 +69,14 @@ namespace ControlsDemo
             }
             return textstyles;
         }
+
+       
+
+
     }
+
+
+
+
+    
 }

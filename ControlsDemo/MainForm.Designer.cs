@@ -65,6 +65,7 @@
             this.btnClearAll.TabIndex = 3;
             this.btnClearAll.Text = "Clear All";
             this.btnClearAll.UseVisualStyleBackColor = true;
+            this.btnClearAll.Click += new System.EventHandler(this.btnClearAll_Click);
             // 
             // btnDisplay
             // 
@@ -97,7 +98,6 @@
             this.label1.Size = new System.Drawing.Size(106, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Select item to display";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // groupBox2
             // 
@@ -113,7 +113,6 @@
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Display Cointeiner";
-            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
             // lblTextStyleCount
             // 
@@ -132,7 +131,6 @@
             this.lblLineTypeCount.Size = new System.Drawing.Size(16, 13);
             this.lblLineTypeCount.TabIndex = 4;
             this.lblLineTypeCount.Text = "...";
-            this.lblLineTypeCount.Click += new System.EventHandler(this.lblLineTypeCount_Click);
             // 
             // lblLayerCount
             // 
@@ -180,7 +178,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainForm";
             this.TopMost = true;
-            this.Load += new System.EventHandler(this.MainForm_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);

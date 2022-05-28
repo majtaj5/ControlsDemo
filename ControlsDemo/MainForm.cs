@@ -18,25 +18,7 @@ namespace ControlsDemo
             InitializeComponent();
         }
 
-        private void MainForm_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox2_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblLineTypeCount_Click(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void btnDisplay_Click(object sender, EventArgs e)
         {
@@ -47,24 +29,35 @@ namespace ControlsDemo
             ControlsDemoUntil cutil = new ControlsDemoUntil();
             switch (choice)
             {
-                case "Layer":
+                case "1":
                     ArrayList layers = cutil.GetLeyers();
                     lstLayer.DataSource = layers;
                     lblLayerCount.Text = layers.Count.ToString();
                     break;
-                case "LineType":
+                case "2":
                     ArrayList linetypes = cutil.GetLineTypes();
-                    lstLayer.DataSource = linetypes;
+                    lstLIneType.DataSource = linetypes;
                     lblLineTypeCount.Text = linetypes.Count.ToString();
                     break;
-                case "Textstyle":
+                case "3":
                     ArrayList textstyle = cutil.GetTextStyles();
-                    lstLayer.DataSource = textstyle;
+                    lstTextStyle.DataSource = textstyle;
                     lblTextStyleCount.Text = textstyle.Count.ToString();
                     break;
 
 
             }
+
+        }
+
+        private void btnClearAll_Click(object sender, EventArgs e)
+        {
+            lstLayer.DataSource = null;
+            lstLIneType.DataSource = null;
+            lstTextStyle.DataSource = null;
+            lblLineTypeCount.Text = null;
+            lblLayerCount.Text = null;
+            lblTextStyleCount.Text = null;
 
         }
     }
